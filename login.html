@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Authentication</title>
+  <header>
+  <li><a href="index.html">Home</a></li>
+</header>
+  <style>
+    header {
+      background-color: antiquewhite;
+      color: #fff;
+      text-align: right;
+      padding: 0em 0;
+    }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.navigation ul li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color:antiquewhite;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="signupForm">
+    <h2>Create an Account</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <button type="button" onclick="createAccount()">Sign Up</button>
+  </form>
+
+  <form id="loginForm">
+    <h2>Login</h2>
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" required>
+
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" required>
+
+    <button type="button" onclick="login()">Login</button>
+  </form>
+
+  <script>
+    // Simple user authentication using JavaScript (not secure for production)
+    const users = [];
+
+    function createAccount() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if the username is already taken
+      if (users.some(user => user.username === username)) {
+        alert('Username already taken. Please choose another one.');
+      } else {
+        // Create a new user object
+        const newUser = { username, password };
+        users.push(newUser);
+
+        // Clear the form
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+
+        alert('Account created successfully. Please log in.');
+      }
+    }
+
+    function login() {
+      const loginUsername = document.getElementById('loginUsername').value;
+      const loginPassword = document.getElementById('loginPassword').value;
+
+      // Check if the entered credentials match any user
+      const user = users.find(user => user.username === loginUsername && user.password === loginPassword);
+
+      if (user) {
+        alert('Login successful!');
+        // You can redirect the user or perform other actions after successful login
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
+
+</body>
+</html>

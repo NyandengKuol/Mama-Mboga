@@ -1,0 +1,137 @@
+*{
+    font-family: sans-serif;
+    list-style: none;
+    background-color:antiquewhite;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+}
+
+.logo{
+    padding: 18px;
+
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.navigation ul li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.button{
+    padding: 18px;
+}
+
+.button button{
+    font-size: 15px;
+    color: #2968be;
+    font-weight: 600;
+    background-color: #e4f2ff;
+    border: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #bcd5f6;
+}
+
+.empower{
+    background-color:antiquewhite;
+    height: 600px;
+}
+
+.empower-1{
+    display: flex;
+    margin: auto;
+    width: 1200px;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.body-text{
+    width: 500px;
+}
+
+.body-text h1{
+    font: size 50px; 
+}
+
+.body-text h3{
+    font-weight: 50;
+    font-size: 15px;
+    line-height: 25px;
+    color: #4A5568;
+}
+
+.btn button{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.btn-1{
+    background-color: #2968be;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    background-color: #1e5195;
+}
+
+.btn-2{
+    color: #2968be;
+    font-weight: 600;
+    background-color: #e4f2ff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    background-color: #bcd5f6;
+}
+.payment {
+    font-weight: 15;
+    font-size: 10px;
+    color: #4A5568;
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    width: 500;
+    padding: top 20px;
+    margin: auto;
+    width: 1200px;
+}
+.logoes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    background-color: #EDF2F7;
+}
+
+.logoes img{
+    width: 80px;
+    height: 30px;
+}
+.picha {
+    margin: 70px;
+}
