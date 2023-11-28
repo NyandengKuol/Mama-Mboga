@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Item Purchase</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Item Purchase</h2>
+    <form action="/process_payment" method="post">
+      <label for="item-name">Item Name</label>
+      <input type="text" id="item-name" name="item-name" required>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" required>
+
+      <label for="total-price">Total Price</label>
+      <input type="text" id="total-price" name="total-price" readonly>
+
+      <button type="button" class="buy-button" onclick="openPaymentForm()">Proceed to Payment</button>
+
+      <!-- Payment form (hidden by default) -->
+      <div id="payment-form" class="hidden">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" required>
+
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <button type="submit" class="pay-now-button">Pay Now</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
